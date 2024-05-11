@@ -1,6 +1,10 @@
 .sp-dropdown{
     padding: 0.8rem 1.5rem;
-    border-radius: 70px; 
+    border-radius: 70px;
+    -webkit-border-radius: 70px;
+    -moz-border-radius: 70px;
+    -ms-border-radius: 70px;
+    -o-border-radius: 70px;
 }
 .dropdown-menu.show {
     padding: 2rem;
