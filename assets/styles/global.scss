@@ -1,0 +1,22 @@
+html {
+    font-size: 62.5%; 
+}
+
+body {
+    padding: 0 1.5rem;
+    margin: 4.8rem  0; 
+    font-size: 1.4rem;
+    color: $sp-header-color;
+    font-family: $Kanit;
+    background-color: $sp-bg-light; 
+}
+
+a {
+    text-decoration: none;
+}
+
+.scrollable-container {
+    @media (max-width: $tablet) { 
+        overflow-x: scroll;
+     }
+}

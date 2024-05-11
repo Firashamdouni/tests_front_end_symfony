@@ -1,0 +1,29 @@
+{% set dropdownOptionsType = {
+    "Staff":"Staff",
+    "Jouers": "Jouers",
+} %}
+
+{% set dropdownOptionsConnexion = {
+    "jamais connecté": "jamais connecté",
+    "< a 1 semaine": "< a 1 semaine",
+    "Entre 1 semaine et 1 mois": "Entre 1 semaine et 1 mois"
+} %}
+<div class="row">
+	<div class="col-md-4">
+		<div class="d-flex gap-3">
+			{% include 'components/atoms/dropdown.html.twig' with {
+    filter: 'Type',
+    title: 'Filtrer par type',
+    dropdownOptions: dropdownOptionsType,
+    id: 'Type',
+} %}
+
+			{% include 'components/atoms/dropdown.html.twig' with {
+    filter: 'Connexion',
+    title: 'Filtrer par date de connexion',
+    dropdownOptions: dropdownOptionsConnexion,
+    id: 'Connexion'
+} %}
+		</div>
+	</div>
+</div>

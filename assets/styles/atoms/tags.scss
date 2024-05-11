@@ -1,0 +1,29 @@
+.sp-tag {
+    padding: 0.14em 0.57em 0.14em 1.5em;
+    border: 1px solid $sp-text-whiter;
+    @include border-radius(30px);
+    width: fit-content;
+
+    &.sp-succes,
+    &.sp-danger {
+        position: relative;
+        &::after {
+            content: " ";
+            position: absolute;
+            height: 8px;
+            width: 8px;
+            top: 50%;
+            left: 8px;
+            @include transform(translateY(-50%));
+            @include border-radius(50%);
+        }
+    }
+
+    &.sp-succes::after {
+        background: $sp-text-sucess;
+    }
+
+    &.sp-danger::after {
+        background: $sp-text-danger;
+    }
+}

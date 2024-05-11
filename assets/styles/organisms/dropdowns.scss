@@ -1,0 +1,18 @@
+.sp-dropdown{
+    padding: 0.8rem 1.5rem;
+    border-radius: 70px; 
+}
+.dropdown-menu.show {
+    padding: 2rem;
+    width: max-content;
+    font-weight: 300;
+    font-size: 1.6rem;
+    box-shadow: 0px 4px 15px -10px #2559F280;
+    .form-check-label {
+        padding-left: .5em;
+    }
+     .form-check-input {
+        border: 2px solid #C8D5EC;
+    }
+}
+

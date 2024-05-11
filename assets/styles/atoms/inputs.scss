@@ -1,0 +1,26 @@
+.form-control.sp-search-input {
+    padding: 1.5rem 8rem 1.5rem 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid $sp-text-light;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color:  $sp-search-color;
+    position: relative;
+    @include border-radius(10px);
+    @include background('../../../public/assets/icons/search.svg',$sp-text-white,no-repeat,20px,95% 50%);
+    &::-webkit-input-placeholder {
+        color:  inherit;
+    }
+    &::-moz-placeholder {
+        color:  inherit;
+    }
+    &:-ms-input-placeholder {
+        color:  inherit;
+    }
+    &::-ms-input-placeholder {
+        color:  inherit;
+    }
+    &::placeholder {
+        color:  inherit;
+    }
+}

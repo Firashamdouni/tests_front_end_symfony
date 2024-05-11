@@ -1,0 +1,50 @@
+{% set members = [
+    {
+        'name': 'Alexandre Miale',
+        'birthday': '25/07/1993',
+        'carrer': {
+            'player': [
+                'Sénior - Equipe 1',
+            ],
+        },
+        'lastConnection': '26/09/2023',
+        'imageFilename': '/assets/icons/alexandre.svg'
+    },
+    {
+        'name': 'Another Name',
+        'birthday': '01/01/2000',
+        'carrer': {
+            'player': [
+                'Sénior - Equipe 1',
+            ],
+            'staff': [
+                'Sénior - Equipe 1',
+            ]
+        },
+        'lastConnection': null
+    }
+] %}
+
+<div class="row">
+	<div class="col-xs-12">
+		<table class="table sp-table">
+			<thead>
+				<tr>
+					<th>prénom, nom</th>
+					<th>né le</th>
+					<th>équipes</th>
+					<th>connexion</th>
+					<th>Contacter</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for data in members %}
+					{% include 'components/molecules/table-member-row.html.twig' with {
+                    data: data
+                } %}
+                {% endfor %}
+                </tbody>
+			</tbody>
+		</table>
+	</div>
+</div>

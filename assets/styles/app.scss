@@ -1,2 +1,13 @@
 
 @import "~bootstrap/scss/bootstrap";
+
+@import "variables";
+@import "fonts";
+@import "global";
+@import "mixins";
+@import "../styles/atoms/titles";
+@import "../styles/atoms/inputs"; 
+@import "../styles/atoms/tags.scss";
+@import "../styles/atoms/buttons";
+@import "../styles/organisms/dropdowns";
+@import "../styles/organisms/tables";

@@ -1,0 +1,23 @@
+<div class="btn-group">
+	<button type="button" class="btn btn-lg btn-primary sp-dropdown  dropdown-toggle"  id={{id}} data-bs-toggle="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+		{{filter}}
+	</button>
+	<ul class="dropdown-menu" aria-labelledby={{id}}>
+    	<li class="mb-3">
+			{% include 'components/atoms/button-refresh.html.twig' with { 
+                text : "Réinitialiser"
+            } %}
+		</li>
+		<li>
+			<h2 class="title-secondary"> {{title}} </h2>
+		</li>
+		{% for label, value in dropdownOptions %}
+			<div class="d-flex align-items-stretch">
+				<input class="form-check-input" type="checkbox" value={{value}} id="flexCheckDefault">
+				<label class="form-check-label" for="flexCheckDefault">
+					{{label}}
+				</label>
+			</div>
+		{% endfor %}
+	</ul>
+</div>

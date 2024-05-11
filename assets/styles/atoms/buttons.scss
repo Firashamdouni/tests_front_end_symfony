@@ -1,0 +1,12 @@
+a.sp-btn-refresh {
+    display: flex;
+    align-items: center;
+    gap: 0.3571em;
+    svg {
+        @include transition(transform 0.3s ease-in-out)
+    }
+
+    &:hover svg {
+        @include transform(rotate(180deg));
+    }
+}

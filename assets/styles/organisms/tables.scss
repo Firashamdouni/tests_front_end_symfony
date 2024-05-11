@@ -1,0 +1,120 @@
+.sp-table {
+    margin-top: -1rem;
+    border-spacing: 0 10px;
+    border-collapse: separate;
+    overflow-x: scroll;
+    white-space: nowrap; 
+    thead tr{
+        th  {
+            padding: 1rem 0;
+            border-color: transparent;
+            font-size: 1.2rem;
+            color: $sp-primary-color;
+            font-weight: 500;
+            letter-spacing: 0.08em; 
+            text-align: left;
+            text-transform: uppercase;
+            &:first-child {
+                padding-left: 2rem;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+            &:last-child {
+                padding-left: 2rem;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+        }   
+    }
+    tbody td {
+        padding: 1.5rem 0;
+        border-color: transparent;
+        font-weight: 500;
+        text-align: left;
+        vertical-align: middle;
+        min-width: calc(100vw / 2.5);
+        @media (min-width: $tablet) { 
+            min-width: unset;
+         }
+        &:first-child {
+            align-items: center;
+            gap: 1rem;
+            padding-left: 2rem;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            position: relative;
+            &::after {
+                content: "";
+                margin: 0 2rem;
+                display: block;
+                width: 1px;
+                background-color: $sp-text-whiter;
+                position: absolute;
+                top: 1.5rem;
+                bottom: 1.5rem;
+                left: 80%;
+            }
+            .sp-table-img {
+                display: inline-block;
+                height: 2.4rem;
+                width: 2.4rem;
+               @include border-radius (50px);
+                &.no-image {
+                    background: $sp-search-color;
+                }
+             }
+            &.sp-table-name {
+                @include transition(color 0.3s ease-in-out);
+                 p {
+                    vertical-align: super;
+                    display: inline-block;              
+                   }
+            }
+        }
+        &:last-child {
+            padding-left: 2rem;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        &.sp-table-birthday {
+            font-weight: normal;
+        }
+        &.sp-table-teams {
+            font-weight: normal;
+            span {
+                padding-right: 0.6em;
+                color: $sp-search-color;
+                &.sp-table-staff {
+                    color: $sp-primary-color;
+                }
+            }
+        }
+        &.sp-table-lastcnx {
+            font-weight: normal;
+            .sp-tag.sp-danger {
+                margin-bottom: 0.5714em;
+            }
+        }
+        &.sp-table-contact button {
+            border: 0;
+            background: transparent;
+            svg {
+                @include transition(fill 0.3s ease-in-out);
+            }
+            &:hover svg path{
+                fill: $sp-primary-color;
+            }
+        }
+    }
+    tbody tr {
+        @include transition(transform 0.3s ease-in-out,box-shadow 0.3s ease-in-out); 
+        cursor: pointer;
+         &:hover{
+            @include transform(translateY(-5px));
+            @include box-shadow( 0px 10px 15px -4px rgba(37, 89, 242, 0.2));
+            .sp-table-name {
+                color: $sp-primary-color;
+            }
+     }
+    }
+}

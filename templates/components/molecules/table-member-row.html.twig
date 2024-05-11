@@ -1,0 +1,45 @@
+<tr>
+	<td class="sp-table-name">
+		<div class="d-flex align-items-center gap-2">
+			{% if data.imageFilename is defined %}
+				<img class="sp-table-img d-none d-sm-block" src='{{ asset(data.imageFilename) }}' />
+			{% else %}
+				<div class="sp-table-img d-none d-sm-block no-image"></div>
+			{% endif %}
+			<span>{{ data.name }}</span>
+		</div>
+	</td>
+	<td class="sp-table-birthday">{{ data.birthday }}</td>
+	<td class="sp-table-teams">
+	{% if  data.carrer is defined  %}
+		{% if  data.carrer.player is defined and  data.carrer.player is not null  %}
+			{% for player in data.carrer.player %}
+				<div><span> Joueur </span> {{ player }}</div>
+			{% endfor %}
+		{% endif %}
+		{% if  data.carrer.staff is defined and data.carrer.staff is not null  %}
+			{% for staff in data.carrer.staff %}
+				<div><span class="sp-table-staff">Staff</span>{{ staff }}</div>
+							
+			{% endfor %}
+		{% endif %}
+	{% endif %}
+	</td>
+	<td class="sp-table-lastcnx">
+		<div class="sp-tag {{ data.lastConnection ? 'sp-succes' : 'sp-danger' }}">
+			{{ data.lastConnection ?? 'Jamais connecté' }}
+		</div>
+		{% if data.lastConnection is null %}
+		{% include 'components/atoms/button-refresh.html.twig' with {
+			text: "Renvoyer linvitation"
+		}  %}
+		{% endif %}
+	</td>
+	<td class="sp-table-contact">
+		<button onclick="">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+				<path d="M14 0.333344H2C1.17275 0.333344 0.5 1.00384 0.5 1.82734V10.8393C0.5 11.6628 1.17275 12.3333 2 12.3333H4.25V15.3333L9.01325 12.3333H14C14.8273 12.3333 15.5 11.6628 15.5 10.8393V1.82734C15.4988 1.43044 15.3402 1.05022 15.059 0.770123C14.7778 0.490029 14.3969 0.332945 14 0.333344Z" fill="#9DAFCD"/>
+			</svg>
+		</button>
+	</td>
+</tr>
