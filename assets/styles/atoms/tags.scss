@@ -1,7 +1,7 @@
 .sp-tag {
     padding: 0.14em 0.57em 0.14em 1.5em;
     border: 1px solid $sp-text-whiter;
-    @include border-radius(30px);
+    @include border-radius(3rem);
     width: fit-content;
 
     &.sp-succes,
@@ -10,8 +10,8 @@
         &::after {
             content: " ";
             position: absolute;
-            height: 8px;
-            width: 8px;
+            height: .8rem;
+            width: .8rem;
             top: 50%;
             left: 8px;
             @include transform(translateY(-50%));

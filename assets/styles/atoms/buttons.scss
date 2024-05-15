@@ -1,7 +1,7 @@
 a.sp-btn-refresh {
     display: flex;
     align-items: center;
-    gap: 0.3571em;
+    gap: .5rem;
     svg {
         @include transition(transform 0.3s ease-in-out)
     }

@@ -12,12 +12,12 @@
 			<h2 class="title-secondary"> {{title}} </h2>
 		</li>
 		{% for label, value in dropdownOptions %}
-			<div class="d-flex align-items-stretch">
-				<input class="form-check-input" type="checkbox" value={{value}} id="flexCheckDefault">
-				<label class="form-check-label" for="flexCheckDefault">
-					{{label}}
-				</label>
-			</div>
-		{% endfor %}
+		<div class="d-flex align-items-stretch">
+			<input class="form-check-input" type="checkbox" value="{{ label }}" id="checkbox_{{id}}_{{label}}">
+			<label class="form-check-label" for="checkbox_{{id}}_{{label}}">
+				{{ value }}
+			</label>
+		</div>
+	{% endfor %}
 	</ul>
 </div>

@@ -5,5 +5,5 @@
  * (and its CSS file) in your base layout (base.html.twig).
  */
 
-
 require('bootstrap');
+require('./js/atoms/dropdown.js');

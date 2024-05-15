@@ -29,11 +29,9 @@
 }
 
 @mixin background($url, $color, $repeat, $size, $position) {
-    @supports(background-image: url($url)){
     background-image: $url;
     background-color: $color;
     background-repeat: $repeat;
     background-size: $size;
-    background-position: $position;
-    }
+    background-position: $position,
 }

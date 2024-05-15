@@ -7,7 +7,7 @@
     color:  $sp-search-color;
     position: relative;
     @include border-radius(10px);
-    @include background('../../../public/assets/icons/search.svg',$sp-text-white,no-repeat,20px,95% 50%);
+    @include background(url('../../../public/assets/icons/search.svg'),$sp-text-white,no-repeat,20px,95% 50%);
     &::-webkit-input-placeholder {
         color:  inherit;
     }
